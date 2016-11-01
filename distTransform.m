@@ -39,6 +39,31 @@ imagesc(double(gradDiff>150) + 0.5*myPoly); % plot medial axis
 axis image;
 
 
+%%
+clf
+figure(3);
+subplot(2,2,1);
+%contour(dist,100);
+%C = del2(dist);
+h=surf(dist);
+set(h,'LineStyle','none')
+title('Distance Transform');
+%figure(4);
+subplot(2,2,2);
+h=surf(gradDiff);
+set(h,'LineStyle','none')
+title('Gradient of distance transform');
+%figure(5);
+subplot(2,2,3);
+histogram(gradDiff,50);
+%set(h,'LineStyle','none')
+title('Histogram of gradient');
+%figure(6);
+subplot(2,2,4);
+imagesc(double(gradDiff>150) + 0.5*myPoly); % plot medial axis
+axis image;
+title('Medial axis');
+
             
             
             

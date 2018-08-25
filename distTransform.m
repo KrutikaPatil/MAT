@@ -1,5 +1,5 @@
 % Plots medial axis transform of a polygon
-% 31 October 2016
+
 
 
 % function dist = distTransform(vertices)
